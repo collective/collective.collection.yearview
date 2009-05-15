@@ -5,7 +5,7 @@ version = '1.0'
 
 setup(name='collective.collection.yearview',
       version=version,
-      description="Filter by year display for collection listings",
+      description="Plone Topic view which allows visitors to filter summary listing by chosen year",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
@@ -15,7 +15,7 @@ setup(name='collective.collection.yearview',
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='plone collection year timeline',
-      author='Twinapex Research',
+      author='Mikko Ohtamaa',
       author_email='mikko.ohtamaa@twinapex.fi',
       url='http://www.twinapex.com',
       license='GPL',

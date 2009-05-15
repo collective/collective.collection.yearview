@@ -5,10 +5,8 @@ to create item archives.
 New display type 'Timespan view' appears in Collection's 'Display' menu. When chosen, Topic content will 
 display "latest, 2009, 2008... 2007" style year selector. Otherwise the view resembles the summary view.
 
-Features
---------
-
-* You do not need a separate news archive folder if you use this view with conjuction of Large Plone Folder
+Features and quality
+--------------------
 
 * Selector is only displayed if there actually exist content from different years
 
@@ -21,7 +19,7 @@ Features
 Notes
 -----
 
-If you have many news/events you might want to use Large Plone Folder instead of a normal folder due to scalability reasons.
+If you have many news/events you might want to use Large Plone Folder instead of a normal Folder due to scalability reasons.
 
 The product does not contain default CSS styles - you must style it yourself. The page template has necessary classes set for rich formatting.
 
