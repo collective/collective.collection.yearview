@@ -29,7 +29,10 @@ class TopicYearView(BrowserView):
     
     """
     
-    template = ViewPageTemplateFile('year_view.pt')    
+    template = ViewPageTemplateFile('year_view.pt')
+    selector = []
+    results  = []
+    timespan = 0
     
     def queryCatalog(self):
         """Call Topic.queryCatalog """

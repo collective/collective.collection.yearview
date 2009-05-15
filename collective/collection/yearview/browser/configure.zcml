@@ -17,7 +17,7 @@
         for="Products.ATContentTypes.interface.topic.IATTopic"
         menu="plone_displayviews"
         title="Timeline View"
-        action="@@view"
+        action="@@timeline-view"
         description="Show timeline filter for the collection listing"
         />
 		
