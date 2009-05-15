@@ -1,0 +1,26 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.collection.yearview">
+
+    <include package="plone.app.contentmenu" />
+
+   <browser:page
+       name="timeline-view"
+       for="Products.ATContentTypes.interface.topic.IATTopic"
+       class=".views.TopicYearView"
+       permission="zope2.View"
+	   allowed_attributes="results timespan selector"
+       />
+
+    <browser:menuItem
+        for="Products.ATContentTypes.interface.topic.IATTopic"
+        menu="plone_displayviews"
+        title="Timeline View"
+        action="@@view"
+        description="Show timeline filter for the collection listing"
+        />
+		
+	
+
+</configure>

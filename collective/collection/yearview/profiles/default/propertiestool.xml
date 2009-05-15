@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+	
+ <object name="yearview_properties" meta_type="Plone Property Sheet" title="collective.collection.yearview settings">
+ 	
+  <property name="title">collective.collection.yearview settings</property>
+
+  <!-- How many items are shown when the current filter is selected -->
+  <property name="latest_filter_items" type="int" purge="False">10</property>  
+  
+  <!-- How many items we look up to extract the date information -->
+  <property name="max_items_to_query" type="int" purge="False">999</property>  
+
+  <!-- Which portal_catalog metadata column is used as a DateTime source to collect available years -->
+  <property name="year_provider_metadata" type="string" purge="False">effective</property>  
+
+ </object>
+</object>
