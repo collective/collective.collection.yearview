@@ -11,6 +11,10 @@
                 tal:define="kssClassesView context/@@kss_field_decorator_view;
                             getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                             templateId template/getId;
+                            normalizeString nocall:context/@@plone/normalizeString;
+                            isAnon context/@@plone_portal_state/anonymous;
+                            mtool context/portal_membership;
+                            toLocalizedTime nocall:context/@@plone/toLocalizedTime;
 							">
 
 

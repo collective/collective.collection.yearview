@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.0 (unreleased)
+----------------
+
+* sunburst compatible template
+  [vangheem]
+
 1.0 (2009-05-15)
 ----------------
 
