@@ -36,7 +36,7 @@
 
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
-		  <div i18n:domain="collective.collection.yearview" class="collection-year-selection" tal:condition="python:len(view.selector) > 0">
+		  <div i18n:domain="collective.collection.yearview" class="collection-year-selection" tal:condition="python:len(view.selector()) > 0">
 		  	
 			  <span class="select-year" i18n:translate="select_year">select_year</span>
 			
@@ -183,18 +183,10 @@
             </tal:block>
 
             <p class="discreet"
-               tal:condition="python: len(view.results) == 0 and here.listCriteria()"
+               tal:condition="python: len(view.results()) == 0"
                i18n:domain="atcontenttypes"
                i18n:translate="description_no_items_in_topic">
                 There are currently no results for this search.
-            </p>
-
-            <p class="discreet"
-               tal:condition="not: here/listCriteria"
-               i18n:domain="atcontenttypes"
-               i18n:translate="description_no_criteria_in_topic">
-                There are currently no criteria on which to search.
-                Please add them using the 'criteria' tab.
             </p>
 
 

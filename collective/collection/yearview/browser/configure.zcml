@@ -7,8 +7,9 @@
 
    <browser:page
        name="timeline-view"
-       for="Products.ATContentTypes.interface.topic.IATTopic"
+       for="plone.app.collection.interfaces.ICollection"
        class=".views.TopicYearView"
+       template="year_view.pt"
        permission="zope2.View"
 	   allowed_attributes="results timespan selector"
        />
