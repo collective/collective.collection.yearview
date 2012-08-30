@@ -25,6 +25,10 @@ The product does not contain default CSS styles - you must style it yourself. Th
 
 Settings can be found from portal_properties / yearview_properties. Please read propertiestool.xml for descriptions.
 
+Github
+------
+https://github.com/collective/collective.collection.yearview
+
 Author
 ------
 
