@@ -11,7 +11,7 @@
        class=".views.TopicYearView"
        template="year_view.pt"
        permission="zope2.View"
-	   allowed_attributes="results timespan selector"
+	   allowed_attributes="results selector"
        />
 
     <browser:menuItem
