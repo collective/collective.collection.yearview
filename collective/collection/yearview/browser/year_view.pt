@@ -36,11 +36,13 @@
 
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
-		  <div i18n:domain="collective.collection.yearview" class="collection-year-selection" tal:condition="python:len(view.selector()) > 0">
+		  <div i18n:domain="collective.collection.yearview" 
+		       class="collection-year-selection" 
+		       tal:condition="python:len(view.selector(templateId)) > 0">
 		  	
 			  <span class="select-year" i18n:translate="select_year">select_year</span>
 			
-			  <tal:selector repeat="selector view/selector">
+			  <tal:selector repeat="selector python:view.selector(templateId)">
 			  	<tal:active condition="selector/active">
 			  		<b class="selector-choice selected" tal:content="selector/label" i18n:translate="" />
 			  	</tal:active>

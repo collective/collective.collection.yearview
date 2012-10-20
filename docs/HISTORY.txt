@@ -1,8 +1,11 @@
 Changelog
 =========
 
-1.0 (unreleased)
+1.1 (unreleased)
 ----------------
+
+* use template id in url for year selectors
+  [jensens]
 
 * sunburst compatible template
   [vangheem]
