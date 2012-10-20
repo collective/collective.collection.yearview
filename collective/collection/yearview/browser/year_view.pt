@@ -10,7 +10,7 @@
     <metal:body define-macro="body_macro"
                 tal:define="kssClassesView context/@@kss_field_decorator_view;
                             getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
-                            templateId template/getId;
+                            context_state context/@@plone_context_state;
                             normalizeString nocall:context/@@plone/normalizeString;
                             isAnon context/@@plone_portal_state/anonymous;
                             mtool context/portal_membership;
@@ -38,11 +38,11 @@
 
 		  <div i18n:domain="collective.collection.yearview" 
 		       class="collection-year-selection" 
-		       tal:condition="python:len(view.selector(templateId)) > 0">
+		       tal:condition="python:len(view.selector(context_state.current_base_url())) > 0">
 		  	
 			  <span class="select-year" i18n:translate="select_year">select_year</span>
 			
-			  <tal:selector repeat="selector python:view.selector(templateId)">
+			  <tal:selector repeat="selector python:view.selector(context_state.current_base_url())">
 			  	<tal:active condition="selector/active">
 			  		<b class="selector-choice selected" tal:content="selector/label" i18n:translate="" />
 			  	</tal:active>

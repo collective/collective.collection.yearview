@@ -90,7 +90,7 @@ class TopicYearView(BrowserView):
                 years.append(year)
         return sorted(years, reverse=True)
 
-    def selector(self, template_id):
+    def selector(self, view_url):
         """ Helper function to generate timespan selection in the template.
 
         @return: list of { "label" : "", "link" : "", "active" : ""
@@ -106,16 +106,15 @@ class TopicYearView(BrowserView):
         selector = []
 
         # fall back to latest items if the timespan is not explictly set
-        latest = {"label": _("latest"), "link": self.context.absolute_url()}
+        latest = {"label": _("latest"), "link": view_url}
         latest["active"] = timespan == None
 
         selector.append(latest)
 
         for year in self.getYears():
             data = {"label": str(year),
-                    "link": self.context.absolute_url() + \
-                            '/%s' % template_id + \
-                            "?timespan=" + str(year)}
+                    "link": "%s?timespan=%s" % (view_url, str(year))
+                   }
             data["active"] = timespan == year
             selector.append(data)
 
